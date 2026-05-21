@@ -7,8 +7,8 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: "https://abdulbasir-portfolio.vercel.app/",
-  methods: ["POST"],
+  origin: "https://abdulbasir-portfolio.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 app.use(express.json());
