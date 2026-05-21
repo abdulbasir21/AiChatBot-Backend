@@ -6,7 +6,11 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://abdulbasir-portfolio.vercel.app/",
+  methods: ["POST"],
+  credentials: true
+}));
 app.use(express.json());
 
 /* -----------------------------
