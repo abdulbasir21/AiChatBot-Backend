@@ -14,7 +14,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options("*", cors(corsOptions)); // ← pass same options here too
+app.options("/(.*)", cors(corsOptions)); // ← pass same options here too
 app.use(express.json());
 
 const { MongoClient } = require("mongodb");
