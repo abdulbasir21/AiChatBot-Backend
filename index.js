@@ -37,7 +37,7 @@ const embeddings = new HuggingFaceInferenceEmbeddings({
 
 const llm = new ChatGroq({
   apiKey: process.env.GROQ_API_KEY,
-  model: "llama-3.1-8b-instant",
+  model: "openai/gpt-oss-20b",
 });
 
 app.post("/chat", async (req, res) => {
